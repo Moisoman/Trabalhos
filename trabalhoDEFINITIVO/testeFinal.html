@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Portas Lógicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="elemento1">
+           <!-- <figure>
+                <img id="img" src="./img/logoUnivel.png"/>
+            </figure>-->
+        </div>
+        <div class="elemento2">SIMULADOR DE PORTAS LÓGICAS</div>
+        <div class="elemento3">
+           <!-- <figure>
+               <img id='img2' src="./img/tads.jpg">
+            </figure>-->
+        </div>
+    </div>
+    <br><br><br>
+
+    <div id="inputs">
+        <label>Portas Lógicas:</label>
+      <input type="radio" class="custom-radio" id="portaAnd" name="porta_logica" value="1" onchange="logicalAnd()" onclick="updateImage()">
+      <label for="and">AND</label>
+      
+      <input type="radio" class="custom-radio" id="portaOr" name="porta_logica" value="1" onchange="logicalOr()" onclick="updateImage()">
+      <label for="or">OR</label>
+
+      <input type="radio" class="custom-radio" id="portaNot" name="porta_logica" value="1" onchange="not_A()" onclick="updateImage()">
+      <label for="or">NOT</label>
+
+      <input type="radio" class="custom-radio" id="portaNand" name="porta_logica" value="1" onchange="logicalNand()" onclick="updateImage()">
+      <label for="or">NAND</label>
+
+      <input type="radio" class="custom-radio" id="portaNor" name="porta_logica" value="1" onchange="logicalNor()" onclick="updateImage()">
+      <label for="or">NOR</label>
+
+      <input type="radio" class="custom-radio" id="portaXor" name="porta_logica" value="1" onchange="logicalXor()" onclick="updateImage()">
+      <label for="or">XOR</label>
+
+      <input type="radio" class="custom-radio" id="portaXnor" name="porta_logica" value="1" onchange="logicalXnor()" onclick="updateImage()">
+      <label for="or">XNOR</label>
+
+    </div>
+    <br><br>
+    <center>
+    <div>
+      <table>
+        <tr>
+            <th >A</th>
+            <th id="colunaB">B</th>
+            <th>Solução:</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td class="colB">0</td>
+            <td id="output_00"></td>
+            </tr>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td class="colB">1</td>
+            <td id="output_01"></td>
+            </tr>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="colB">0</td>
+            <td id="output_10"></td>
+            </tr>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="colB">1</td>
+            <td id="output_11"></td>
+            </tr>
+        </tr>
+      </table>  
+    </div><br><br><br>
+    <div class="logic_ports_checkbox">
+      <div class="checkb_style">
+        <label class="checkbox-container">
+            <input type="checkbox" id="checkbox1" placeholder="0" onchange="updateColor()" onclick="updateColor()">
+            <span class="custom-checkbox"></span>
+            <label for="input1">A</label>
+        </label><br><br><br><br>
+
+        <label class="checkbox-container">
+            <input type="checkbox" id="checkbox2" onchange="updateColor()" onclick="updateColor()">
+            <span class="custom-checkbox"></span>
+            <label for="input2">B</label>
+        </label>
+      </div>
+      <div class="result">
+        <h1 class="resultstyle" id="saida">Solução:</h1>
+      </div>
+    </div><br><br><br>
+    <div>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbologia-porta-and.jpg" id="img_and"></picture>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbologia-porta-or-2-600.webp" id="img_or"></picture>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbologia-porta-not-600.webp" id="img_not"></picture>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbolo-porta-nand-600.webp" id="img_nand"></picture>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbolo-porta-nor-600.webp" id="img_nor"></picture>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbolo-xor-600.webp" id="img_xor"></picture>
+        <picture><img src="https://www.manualdaeletronica.com.br/y/351/Simbolo-porta-xnor-600.webp" id="img_xnor"></picture>
+    </div>
+   </center>
+    <script src="testeFinal.js"></script>
+</body>
+</html>
